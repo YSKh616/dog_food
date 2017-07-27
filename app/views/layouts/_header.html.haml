@@ -1,0 +1,21 @@
+%header.header
+  .header-inner
+    %h1.header-logo
+      %a{:href => "https://www.wango.com/"}
+        %img{src: "https://scontent-nrt1-1.xx.fbcdn.net/v/t34.0-12/20068314_1382189165190892_826014115_n.png?oh=7cf923e2373f3dcd7b07107c0eb8ab94&oe=597C40C4"}
+    .header-description
+      ワンご
+    #user_sign_in
+      %li.link
+        -if user_signed_in?
+          %a
+            =link_to destroy_user_session_path, method: :delete do
+              ログアウト
+        -else
+          %a
+            =link_to new_user_session_path, method: :get do
+              ログイン
+    #new_recipes
+      %li.link
+        %a
+          レシピ投稿

@@ -1,0 +1,89 @@
+.wrapper {
+  background: none;
+}
+.sign_in {
+  text-align: center;
+  margin: 68px 0 26px 0;
+}
+
+.company_logo {
+  margin-bottom: 20px;
+  img {
+    height: 80px;
+    width: 60px;
+  }
+  h2 {
+    color: #6a6a6a;
+    font-size: 18px;
+    line-height: 36px;
+    margin-bottom: 6px;
+  }
+}
+
+.sign_in_form {
+  position: relative;
+  padding:0 10px 0 10px;
+  text-align: center;
+}
+.sign_in_form_position {
+  max-width: 300px;
+  background: #ffffff;
+  margin: 0px auto 28px auto;
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  text-align: left;
+}
+.login_form h2{
+  margin: 32px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.field {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#user_email {
+  width: 230px;
+  height: 30px;
+  border-radius: 7px;
+  border: solid 1px #d0d0d0;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  background-color: #ffffff;
+  text-align: center;
+}
+#user_password {
+  width: 230px;
+  height: 30px;
+  border-radius: 7px;
+  border: solid 1px #d0d0d0;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+label {
+  font-size: 10px;
+  color: #6a6a6a;
+  margin-bottom: 5px;
+}
+.actions {
+  text-align: center;
+}
+.actions input {
+  background-color: #2dbe60;
+  border-radius: 7px;
+  width: 230px;
+  height: 30px;
+  color: white;
+  border: none;
+}
+a {
+  font-size: 10px;
+  margin-left: 80px;
+}

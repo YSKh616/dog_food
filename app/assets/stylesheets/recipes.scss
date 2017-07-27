@@ -1,3 +1,178 @@
+#wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+#top-image {
+  width: 100%;
+  border-bottom: 1px solid #cfcfcf;
+  .top-image-inner {
+    width: 1008px;
+    margin: 0 auto;
+    padding: 40px 0;
+    .top-image-content {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      background-color: white;
+    }
+    .top-image-content img{
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+}
+#content {
+  width: 100%;
+  background: #FFF;
+  .content-inner {
+    padding-top: 40px;
+    width: 1008px;
+    margin: 0 auto;
+    position: relative;
+    clear: both;
+  }
+}
+
+#left-content {
+  width: 696px;
+  float: left;
+  padding-bottom: 112px;
+}
+
+#left-content #h2{
+  margin: 0 24px 12px 0;
+  padding: 0 0 8px;
+}
+.headline-title {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+.header-separator {
+  border-bottom: 1px solid #c6b363;
+}
+
+.category_search {
+  margin-bottom: 40px;
+}
+.category_search_list {
+  margin-top: 24px;
+  font-size: 0;
+  padding-left: 0;
+  li {
+    padding-left: 0;
+    border-left: none;
+    display: inline-block;
+    font-size: 14px;
+    padding: 0 16px;
+    border-right: 1px solid #EEE;
+  }
+}
+#search_box {
+    position: relative;
+    margin: 15px 0;
+}
+#search_box input {
+    width: 320px;
+    height: 40px;
+    color: #5e5e5e;
+    font-size: 14px;
+    background: #EEE;
+    border: none;
+    border-radius: 6px;
+    padding: 0 16px 0 40px;
+    box-sizing: border-box;
+}
+#search_box img {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    width: 14px;
+    cursor: pointer;
+}
+.image-list-content {
+  margin-top: 16px;
+  width: 208px;
+  margin: 24px 20px 0 0;
+  display: inline-block;
+}
+.image-list-model {
+  display: block;
+  position: relative;
+  width: 208px;
+  height: 208px;
+  cursor: pointer;
+  background-color: orange;
+  border-radius: 10px;
+}
+.image-list-title {
+  width: 208px;
+  margin: 8px 0;
+  height: 40px;
+}
+.image-list-title p{
+  width: 208px;
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: bold;
+}
+
+.image-list-introducion {
+  color: #5e5e5e;
+  font-size: 13px;
+  margin: 8px 0;
+  line-height: 1.3;
+  height: 30px;
+}
+
+.image-list-ingredients {
+  color: #8E8E8E;
+  font-size: 11px;
+  margin: 8px 0;
+  line-height: 1.3;
+  margin: 8px 0 0;
+  height: 28px;
+}
+
+.right-sidebar {
+  position: relative;
+  float: right;
+  width: 312px;
+  top: 0;
+  right: 0;
+  background: #FFF;
+  margin-bottom: 40px;
+  z-index: 3;
+}
+.right-sidebar-separator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: #cfcfcf;
+  .google-ads {
+    margin: 0 0 24px 24px;
+  }
+  .adsbygoogle {
+    display: inline-block;
+    width: 300px;
+    height: 250px;
+  }
+}
+.right-sidebar-header-separator {
+  margin-top: 40px;
+  padding-bottom: 8px;
+  margin: 0 0 24px 24px;
+  .headline-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
 // Place all the styles related to the recipes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/

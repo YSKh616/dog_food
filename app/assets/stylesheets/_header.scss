@@ -1,0 +1,79 @@
+body {
+  width: 100%;
+  background: #F1F1F2;
+  color: #262626;
+  font-family: Helvetica,HiraKakuProN-W3,'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+  line-height: 1em;
+  text-rendering: optimizelegibility;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+div, h1, a, form {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+.header {
+  width: 100%;
+  background: #FFF;
+  padding: 16px 0;
+  border-bottom: 1px solid #cfcfcf;
+  .header-inner {
+    width: 1008px;
+    margin: 0 auto;
+    text-align: left;
+    .header-logo {
+      display: inline-block;
+      margin: 0 auto;
+      padding: 0;
+    }
+    .header-logo img {
+      width: 60px;
+    }
+    .header-description {
+      display: inline-block;
+      margin-left: 40px;
+      font-size: 40px;
+      line-height: 1.5;
+      color: green;
+    }
+  }
+  #user_sign_in {
+    margin: 0 10px;
+    float: right;
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+  }
+  #new_recipes {
+    margin: 0 10px;
+    float: right;
+    list-style: none;
+    display: inline-block;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+  }
+  .link a {
+    float: right;
+    display: inline-block;
+    padding: 10px 10px;
+    color: green;
+    border: none;
+    cursor: pointer;
+  }
+}
+
