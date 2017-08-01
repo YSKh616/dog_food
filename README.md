@@ -1,24 +1,58 @@
-# README
+## users テーブル
+|Column|Type|Option|
+|------|----|------|
+|name|string|null: false, add_index|
+|email|text|null: false|
+|age|integer|
+|gender|string|
+|area|string|
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Association
+- has_many :dogs
+- has_many :recipes
 
-Things you may want to cover:
+##dog
+|Column|Type|Option|
+|------|----|------|
+|name|string|
+|age|integer|
+|type|string|
+|gender|string|
+|image|text|
+|user_id|integer|foreign_true|
 
-* Ruby version
+### Association
+- belongs_to :user
 
-* System dependencies
+##recipe
+|Column|Type|Option|
+|------|----|------|
+|title|text|null: false|
+|Image|text|
+|description|text|
+|user_id|integer|foreign_true|
 
-* Configuration
+### Association
+- belongs_to :user
+- has_many :processs
+- has_many :raw_materials
 
-* Database creation
+##process
+|Column|Type|Option|
+|------|----|------|
+|description|text|
+|image|text|
+|recipe_id|integer|foreign_true|
 
-* Database initialization
+###Association
+- belongs_to :recipe
 
-* How to run the test suite
+##raw_material
+|Column|Type|Option|
+|------|----|------|
+|material|string|
+|quantity|string|
+|recipe_id|integer|foreign_true|
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+###Association
+- belongs_to :recipe
