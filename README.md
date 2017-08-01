@@ -34,10 +34,10 @@
 
 ### Association
 - belongs_to :user
-- has_many :processs
+- has_many :procedures
 - has_many :raw_materials
 
-##process
+##procedure
 |Column|Type|Option|
 |------|----|------|
 |description|text|
