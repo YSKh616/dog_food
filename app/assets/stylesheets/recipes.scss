@@ -33,6 +33,7 @@
     margin: 0 auto;
     position: relative;
     clear: both;
+    height: 100%;
   }
 }
 
@@ -106,7 +107,7 @@
   width: 208px;
   height: 208px;
   cursor: pointer;
-  background-color: orange;
+  background-color: green;
   border-radius: 10px;
 }
 .image-list-title {

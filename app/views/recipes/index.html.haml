@@ -25,16 +25,17 @@
             新着レシピ
           .recipes-list
             .image-list-content
-              .image-list-model
-                .img
-              .image-list-info
-                .image-list-title
-                  %p.model-trigger
-                    手作り醬油ダレでツナとトマトの冷やし中華
-                .image-list-introduction
-                  手作りタレととまとがおいしく絡み合う
-                .image-list-ingredient
-                  お湯、中華麺、ニラ、トマト
+              =link_to "/recipes/1", method: :get do
+                .image-list-model
+                  .img
+                .image-list-info
+                  .image-list-title
+                    %p.model-trigger
+                      手作り醬油ダレでツナとトマトの冷やし中華
+                  .image-list-introduction
+                    手作りタレととまとがおいしく絡み合う
+                  .image-list-ingredient
+                    お湯、中華麺、ニラ、トマト
             .image-list-content
               .image-list-model
                 .img
