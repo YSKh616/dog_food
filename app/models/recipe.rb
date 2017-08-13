@@ -5,4 +5,5 @@ class Recipe < ApplicationRecord
 
   accepts_nested_attributes_for :procedures
   accepts_nested_attributes_for :raw_materials
+  mount_uploader :image, ImageUploader
 end
