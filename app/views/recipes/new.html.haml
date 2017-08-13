@@ -17,7 +17,8 @@
             レシピ作成
           .set_recipe_title
             = f.text_field :title, placeholder: "料理名を入力して下さい", class: "set_recipe_title__input"
-          .set_recipe_image{src: "https://assets.cpcdn.com/assets/shared/big_spinner.gif?7c09b92e320491a623a40b10cf1426322408ceb8a43486d312d0b68c293acd02"}
+          .set_recipe_image
+            %img#img_prev.img-thumbnail.hidden{height: "100px", width: "100px"}
             = f.file_field :image, placeholder: "人や人物が映り込んだ写真、オリジナルでないものはご遠慮下さい"
           .set_recipe_description
             = f.text_field :description, placeholder: "詳細を入力して下さい", class: "set_recipe_description__input"
