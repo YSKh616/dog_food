@@ -5,9 +5,15 @@ class RecipesController < ApplicationController
   end
 
   def new
+    @recipe = Recipe.new
+    @recipe.raw_materials.build
+    @recipe.procedures.build
   end
 
   def create
+    @recipe = Recipe.new(recipe_params)
+    @recipe.save
+    redirect_to root_path
   end
 
   def show
@@ -16,5 +22,8 @@ class RecipesController < ApplicationController
   private
   def move_to_index
     redirect_to action: :index unless user_signed_in?
+  end
+  def recipe_params
+    params.require(:recipe).permit(:title, :image, :description, raw_materials_attributes: [:id, :material, :quantity], procedures_attributes: [:id, :image, :description]).merge(user_id: current_user.id)
   end
 end
