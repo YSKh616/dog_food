@@ -1,0 +1,104 @@
+.recipe_content_inner {
+  padding: 10px 10px 0 10px;
+  background-color: #F1F1F2;
+  z-index: 10;
+  max-width: 700px;
+  margin:0 auto;
+}
+
+.raw_material_title {
+  cursor: pointer;
+}
+.new_recipe {
+  max-width: 800px;
+  background: #ffffff;
+  margin: 0px auto 28px auto;
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  text-align: left;
+  height: 700px;
+  margin-top: 50px;
+  padding: 40px;
+}
+.links_for_list_author {
+  width: 100%;
+  margin-bottom: 10px;
+  height: 120px;
+}
+.set_delete_link a{
+  float: right;
+  font-size: 16px;
+  color: #999999;
+}
+.box_title {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.raw_material_content_inner {
+  height: 20px;
+}
+.raw_material_box {
+  background-color: rgb(255, 255, 255);
+  z-index: 9999;
+  border: 5px solid #e3dcca;
+  border-radius: 5px;
+  width: 300px;
+  padding: 10px;
+}
+.list_header {
+  margin: 20px, 0, 5px, 20px;
+}
+.list_header span{
+  display: inline-block;
+  background-color: gray;
+  color: black;
+  border-radius: 5px;
+  background: #f7f3e8;
+  line-height: 22px;
+  font-size: 15px;
+  width: 120px;
+  text-align: center;
+}
+ .list_header.material {
+  width: 40px;
+  display: inline-block;
+  margin-left: 10px;
+  float: left;
+ }
+ .list_header.quantity {
+  width: 40px;
+  margin-left: 10px;
+  display: inline-block;
+  float: left;
+}
+.edit_raw_material_list {
+  margin-top: 5px;
+  height: 25px;
+}
+.edit_name {
+  display: block;
+  float: left;
+}
+.edit_quantity {
+  display: block;
+  float: left;
+  margin-left: 10px;
+}
+.material_add_button {
+  cursor: pointer;
+  a {
+    margin-left: 0;
+    color: white;
+    background-color: green;
+    font-size: 16px;
+  }
+}
+.procedure_add_button {
+  cursor: pointer;
+  a {
+    margin-left: 0;
+    color: white;
+    background-color: green;
+    font-size: 16px;
+  }
+}

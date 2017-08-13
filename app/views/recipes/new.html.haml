@@ -1,1 +1,59 @@
-%p レシピ投稿画面
+%header.header
+  .header-inner
+    %h1.header-logo
+      %a{:href => "https://www.wango.com/"}
+        %img{src: "https://scontent-nrt1-1.xx.fbcdn.net/v/t34.0-12/20068314_1382189165190892_826014115_n.png?oh=7cf923e2373f3dcd7b07107c0eb8ab94&oe=597C40C4"}
+    .header-description
+      ワンご
+#wrapper.recipe_input
+  #content.recipe_content
+    .recipe_content_inner
+      = form_for @recipe do |f|
+        .links_for_list_author
+          .set_delete_link
+            %a
+              削除
+          .box_title
+            レシピ作成
+          .set_recipe_title
+            = f.text_field :title, placeholder: "料理名を入力して下さい", class: "set_recipe_title__input"
+          .set_recipe_image{src: "https://assets.cpcdn.com/assets/shared/big_spinner.gif?7c09b92e320491a623a40b10cf1426322408ceb8a43486d312d0b68c293acd02"}
+            = f.file_field :image, placeholder: "人や人物が映り込んだ写真、オリジナルでないものはご遠慮下さい"
+          .set_recipe_description
+            = f.text_field :description, placeholder: "詳細を入力して下さい", class: "set_recipe_description__input"
+          .raw_material_content_inner
+            .p.raw_material_title
+              材料を入力
+        .raw_material_input_form
+          .raw_material_box
+            = f.fields_for :raw_materials do |r|
+              .raw_material_list
+                .list_header
+                  %span.name
+                    材料
+                  %span.quantity
+                    分量
+                .edit_raw_material_list
+                  %span
+                    =r.text_field :material, placeholder: "材料を入力", class: "edit_name", size: "12"
+                  %span
+                    =r.text_field :quantity, placeholder: "分量を入力", class: "edit_quantity", size: "12"
+            .material_add_button
+              %a
+                行を追加する
+        .procedure_input_form
+          .procedure_box
+            = f.fields_for :procedures do |pr|
+              .procedures_list
+                .procedure_header
+                  %a
+                    手順.1
+                .procedure_image
+                  =pr.file_field :image
+                .procedure_description
+                  =pr.text_field :description, placeholder: "詳細な手順を入力して下さい"
+          .procedure_add_button
+            %a
+              手順を追加する
+          .send_recipe
+            = f.submit "作成する", class: "send_recipe__button", name: "commit"
