@@ -11,7 +11,7 @@ $(function() {
   }
 
   $("#recipe_image").change(function(){
-    $('#img_prev').removeClass('hidden');
+    $('#img_prev').show();
     readURL(this);
   });
 });
