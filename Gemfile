@@ -39,6 +39,8 @@ gem 'haml-rails', '~> 0.9'
 gem 'erb2haml'
 gem 'devise'
 gem 'jquery-rails'
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
