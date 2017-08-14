@@ -22,9 +22,9 @@
           .recipes-list
             -@recipes.each do |recipe|
               .image-list-content
-                =link_to "/recipes/recipe.id", method: :get do
+                =link_to "/recipes/#{recipe.id}", method: :get do
                   .image-list-model
-                    =image_tag recipe.image
+                    =image_tag recipe.image, size: "208x208"
                   .image-list-info
                     .image-list-title
                       %p.model-trigger

@@ -3,81 +3,35 @@
   .recipe_detail_content
     .recipe_detail_image
       .recipe_image
-        %img{height: "320px", width: "320px"}
-          レシピイメージ
+        =image_tag @recipe.image, size: "320x320"
     .recipe_detail_main_info
       .recipe_title
         %h1.title
           %span
-            バンバンジーサラダ
+            =@recipe.title
       %p.description
-        茹でた鶏肉とタップリ野菜の棒棒鶏風サラダです♪
+        =@recipe.description
       %h2.ingredient_header
         %span.text-h2
           材料
       %ul.ingredient_list
-        %li.ingredient
-          %span
-            鶏ささみ
-          %span.ingredient_serving
-            110g
-        %li.ingredient
-          %span
-            サツマイモ
-          %span.ingredient_serving
-            60g
-        %li.ingredient
-          %span
-            きゅうり
-          %span.ingredient_serving
-            50g
-        %li.ingredient
-          %span
-            ごま油
-          %span.ingredient_serving
-            小さじ1杯
+        -@recipe.raw_materials.each do |raw_material|
+          %li.ingredient
+            %span
+              =raw_material.material
+            %span.ingredient_serving
+              =raw_material.quantity
   .recipe_steps
     %h2
       %span.text-h2
         料理手順
-    .steps
-      .step
-        %p.step-num
-          1.
-        .step-image-wrap
-          %img.img-wrapper
-        %h3.step-desc
-          %span.text-p
-            鶏ささみを熱湯で２～３分茹でる
-      .step
-        %p.step-num
-          2.
-        .step-image-wrap
-          %img.img-wrapper
-        %h3.step-desc
-          %span.text-p
-            サツマイモ電子レンジで加熱して柔らかくする
-      .step
-        %p.step-num
-          3.
-        .step-image-wrap
-          %img.img-wrapper
-        %h3.step-desc
-          %span.text-p
-            それぞれ犬がたべやすい大きさに切る
-      .step
-        %p.step-num
-          4.
-        .step-image-wrap
-          %img.img-wrapper
-        %h3.step-desc
-          %span.text-p
-            きゅうりは細きれにする。
-      .step
-        %p.step-num
-          5.
-        .step-image-wrap
-          %img.img-wrapper
-        %h3.step-desc
-          %span.text-p
-            全部をボウルにいれてごま油であえる
+    -@recipe.procedures.each do |procedure|
+      .steps
+        .step
+          %p.step-num
+            1.
+          .step-image-wrap
+            =image_tag procedure.image, class: "img-wrapper", size: "150x150"
+          %h3.step-desc
+            %span.text-p
+              =procedure.description
