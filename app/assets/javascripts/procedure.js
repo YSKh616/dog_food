@@ -14,8 +14,14 @@ $(function() {
       + '<div class="procedure_description">'
       + '<input placeholder="詳細な手順を入力して下さい" type="text" name="recipe[procedures_attributes]['+ procedure_num +'][description]" id="recipe_procedures_attributes_'+ procedure_num + '_image">'
       + '</div>'
+      + '<button class="delete_button" id="delete_button_id">'
+      + '削除'
+      + '</button>'
       + '</div>'
       $('.procedure_box').append(input);
       procedure_num ++;
   });
+  $(document).on('click','#delete_button_id', function(){
+    $('#delete_button_id').parent().remove();
+  })
 });
