@@ -9,8 +9,14 @@ $(function() {
       + '<span>'
       + '<input placeholder="分量を入力" class="edit_quantity" size="12" type="text" name="recipe[raw_materials_attributes]['+ material_num + '][quantity]"  id="recipe_raw_materials_attributes_'+ material_num +'_quantity" required>'
       + '</span>'
+      + '<button class="delete_button" id="delete_button_id">'
+      + '削除'
+      + '</button>'
       + '</div>'
       $('.raw_material_list').append(input);
       material_num ++;
   });
+  $(document).on('click','#delete_button_id', function(){
+    $('#delete_button_id').parent().remove();
+  })
 });

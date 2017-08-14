@@ -78,6 +78,11 @@
   margin-top: 5px;
   height: 25px;
 }
+.delete_button {
+  margin-left: 10px;
+  line-height: 25px;
+  cursor: pointer;
+}
 .edit_name {
   display: block;
   float: left;
@@ -104,4 +109,7 @@
     background-color: green;
     font-size: 16px;
   }
+}
+.procedure-thumbnail {
+  display: none;
 }

@@ -48,8 +48,9 @@
               .procedures_list
                 .procedure_header
                   %a
-                    手順.1
+                    1
                 .procedure_image
+                  %img#procedure_0_prev.procedure-thumbnail.hide{height: "100px", width: "100px"}
                   =pr.file_field :image
                 .procedure_description
                   =pr.text_field :description, placeholder: "詳細な手順を入力して下さい"
