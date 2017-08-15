@@ -9,7 +9,6 @@ $(function() {
       reader.readAsDataURL(input.files[0]);
     }
   }
-
   $("#recipe_image").change(function(){
     $('#img_prev').show();
     readURL(this);
