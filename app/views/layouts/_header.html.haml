@@ -1,10 +1,9 @@
-%header.header
-  .header-inner
-    %h1.header-logo
-      %a{:href => "https://www.wango.com/"}
-        %img{src: "https://scontent-nrt1-1.xx.fbcdn.net/v/t34.0-12/20068314_1382189165190892_826014115_n.png?oh=068b494d10318ce406e2d6b6f8ed42a5&oe=59896FC4"}
-    .header-description
-      わんご
+%header.navbar.navbar-fixed-top
+  .container
+    .navbar-header
+      %img{src: "/assets/wango_logo.png", width: "80px", height: "80px"}
+    %span
+      ワンご
     #user_sign_in
       %li.link
         -if user_signed_in?
