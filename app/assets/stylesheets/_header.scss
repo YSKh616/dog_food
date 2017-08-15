@@ -26,31 +26,42 @@ div, h1, a, form {
 a {
   text-decoration: none;
 }
-.header {
+.navbar {
   width: 100%;
-  background: #FFF;
   padding: 10px 0;
   border-bottom: 1px solid #cfcfcf;
-  .header-inner {
-    width: 1008px;
-    margin: 0 auto;
-    text-align: left;
-    .header-logo {
-      display: inline-block;
-      margin: 0 auto;
-      padding: 0;
-    }
-    .header-logo img {
-      width: 60px;
-    }
-    .header-description {
-      display: inline-block;
-      margin-left: 40px;
-      font-size: 40px;
-      line-height: 1.5;
-      color: green;
-    }
+  background-color: #e0ffc1;
+  opacity: 0.9;
   }
+.navbar-header {
+  opacity: 1.0;
+  img {
+  display: block;
+  }
+}
+.container {
+  width: 940px;
+  margin: 0 auto;
+  span {
+    margin-left: 20px;
+    margin-top: 15px;
+    font-size: 40px;
+    color: #008000;
+    line-height: 60px;
+    vertical-align: middle;
+    font-weight: bold;
+    width: 200px;
+    display: inline-block;
+  }
+  a {
+    color: #008000;
+    line-height: 60px;
+    margin-left: 20px;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
   #user_sign_in {
     margin: 0 10px;
     float: right;
@@ -72,10 +83,8 @@ a {
     float: right;
     display: inline-block;
     padding: 10px 10px;
-    font-size: 15px;
     color: green;
     border: none;
     cursor: pointer;
   }
-}
 
