@@ -4,10 +4,10 @@ $(function() {
     var input =
       '<div class="edit_raw_material_list">'
       + '<span>'
-      + '<input placeholder="材料を入力" class="edit_name" size="12" type="text" name="recipe[raw_materials_attributes]['+ material_num + '][material]"  id="recipe_raw_materials_attributes_'+ material_num +'_material" required>'
+      + '<input class="edit_name" size="12" type="text" name="recipe[raw_materials_attributes]['+ material_num + '][material]"  id="recipe_raw_materials_attributes_'+ material_num +'_material" required>'
       + '</span>'
       + '<span>'
-      + '<input placeholder="分量を入力" class="edit_quantity" size="12" type="text" name="recipe[raw_materials_attributes]['+ material_num + '][quantity]"  id="recipe_raw_materials_attributes_'+ material_num +'_quantity" required>'
+      + '<input class="edit_quantity" size="12" type="text" name="recipe[raw_materials_attributes]['+ material_num + '][quantity]"  id="recipe_raw_materials_attributes_'+ material_num +'_quantity" required>'
       + '</span>'
       + '<button class="delete_button" id="delete_button_id">'
       + '削除'

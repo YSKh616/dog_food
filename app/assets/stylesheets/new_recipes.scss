@@ -1,19 +1,27 @@
+#wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 100px;
+    background-color: #fff;
+}
+#content {
+    width: 100%;
+    background: #FFF;
+}
 .recipe_content_inner {
   padding: 10px 10px 0 10px;
   background-color: #F1F1F2;
   z-index: 10;
-  max-width: 700px;
-  margin:0 auto;
+  max-width: 1170px;
+  margin: 0 auto;
 }
 
 .raw_material_title {
   cursor: pointer;
 }
 .new_recipe {
-  max-width: 800px;
   background: #ffffff;
   margin: 0px auto 28px auto;
-  border: 1px solid #dedede;
   border-radius: 2px;
   text-align: left;
   height: 700px;
@@ -31,11 +39,57 @@
   color: #999999;
 }
 .box_title {
-  font-size: 20px;
+  font-size: 30px;
   margin-bottom: 8px;
+  font-weight: bold;
+  color: #008000;
+}
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.set_recipe_title__input {
+  display: block;
+  width: 350px;
+  height: 40px;
+  border:1px solid #777;
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 4px #e6e6e6;
+  }
+.set_recipe_image {
+  margin-top: 10px;
+  a {
+    margin-left: 5px;
+    color: #008000;
+    text-decoration: none;
+  }
 }
 .img-thumbnail {
   display: none;
+}
+.set_recipe_description {
+  margin-top: 15px;
+  a {
+    font-size: 20px;
+    color: #008000;
+    font-weight: bold;
+  }
+}
+.set_recipe_description__input{
+  display: block;
+  width: 350px;
+  height: 80px;
+  border:1px solid #777;
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 4px #e6e6e6;
+}
+.raw_material_input_form {
+  margin-bottom: 10px;
+}
+.raw_material_title {
+  font-size: 30px;
+  color: #008000;
+  font-weight: bold;
 }
 .raw_material_content_inner {
   height: 20px;
@@ -45,38 +99,49 @@
   z-index: 9999;
   border: 5px solid #e3dcca;
   border-radius: 5px;
-  width: 300px;
-  padding: 10px;
+  padding: 20px;
+}
+.raw_material_list {
+  margin: 0 auto;
 }
 .list_header {
-  margin: 20px, 0, 5px, 20px;
+  margin: 20px, 0, 15px, 50px;
 }
 .list_header span{
   display: inline-block;
   background-color: gray;
   color: black;
   border-radius: 5px;
-  background: #f7f3e8;
-  line-height: 22px;
-  font-size: 15px;
-  width: 120px;
+  background: #e0ffc1;
+  line-height: 30px;
+  font-size: 18px;
+  width: 150px;
   text-align: center;
+  color: #008000;
+  font-weight: bold;
 }
- .list_header.material {
-  width: 4px;
-  display: inline-block;
-  margin-left: 10px;
-  float: left;
- }
- .list_header.quantity {
-  width: 40px;
-  margin-left: 10px;
-  display: inline-block;
-  float: left;
+.list_header .quantity {
+  margin-left: 5px;
 }
 .edit_raw_material_list {
   margin-top: 5px;
-  height: 25px;
+  height: 30px;
+  .edit_name {
+    width: 150px;
+    height: 30px;
+    display: block;
+    border:1px solid #777;
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 4px #e6e6e6;
+  }
+  .edit_quantity{
+    width: 150px;
+    height: 30px;
+    display: block;
+    border:1px solid #777;
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 4px #e6e6e6;
+  }
 }
 .delete_button {
   margin-left: 10px;
@@ -94,12 +159,23 @@
 }
 .material_add_button {
   cursor: pointer;
+  margin-top: 20px;
   a {
+    padding: 5px 7px;
     margin-left: 0;
     color: white;
     background-color: green;
     font-size: 16px;
+    border-radius: 7px;
+    text-decoration: none;
   }
+}
+.procedure_input_form {
+  margin-top: 30px;
+  float: left;
+}
+.procedures_list {
+  display: inline-block;
 }
 .procedure_add_button {
   cursor: pointer;
@@ -110,6 +186,29 @@
     font-size: 16px;
   }
 }
+.procedure_description input{
+  display: block;
+  width: 150px;
+  height: 120px;
+  border:1px solid #777;
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 4px #e6e6e6;
+}
 .procedure-thumbnail {
   display: none;
+}
+.procedure_add_button {
+  margin-top: 30px;
+  a {
+    padding: 5px 7px;
+    margin-left: 0;
+    color: white;
+    background-color: green;
+    font-size: 16px;
+    border-radius: 7px;
+    text-decoration: none;
+  }
+}
+.send_recipe {
+  margin-top: 30px;
 }

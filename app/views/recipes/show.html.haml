@@ -1,37 +1,38 @@
 = render "layouts/header"
-.recipe_detail
-  .recipe_detail_content
-    .recipe_detail_image
-      .recipe_image
-        =image_tag @recipe.image, size: "320x320"
-    .recipe_detail_main_info
-      .recipe_title
-        %h1.title
-          %span
-            =@recipe.title
-      %p.description
-        =@recipe.description
-      %h2.ingredient_header
-        %span.text-h2
-          材料
-      %ul.ingredient_list
-        -@recipe.raw_materials.each do |raw_material|
-          %li.ingredient
+#wrapper
+  .recipe_detail
+    .recipe_detail_content.row
+      .recipe_detail_image.col-md-6
+        .recipe_image
+          =image_tag @recipe.image, size: "320x320"
+      .recipe_detail_main_info.col-md-6
+        .recipe_title
+          %h1.title
             %span
-              =raw_material.material
-            %span.ingredient_serving
-              =raw_material.quantity
-  .recipe_steps
-    %h2
-      %span.text-h2
-        料理手順
-    -@recipe.procedures.each do |procedure|
-      .steps
-        .step
-          %p.step-num
-            1.
-          .step-image-wrap
-            =image_tag procedure.image, class: "img-wrapper", size: "150x150"
-          %h3.step-desc
-            %span.text-p
-              =procedure.description
+              =@recipe.title
+        %p.description
+          =@recipe.description
+        %h2.ingredient_header
+          %span.text-h2
+            材料
+        %ul.ingredient_list
+          -@recipe.raw_materials.each do |raw_material|
+            %li.ingredient
+              %span
+                =raw_material.material
+              %span.ingredient_serving
+                =raw_material.quantity
+    .recipe_steps
+      %h2
+        %span.text-h2
+          料理手順
+      -@recipe.procedures.each do |procedure|
+        .steps
+          .step
+            %p.step-num
+              1.
+            .step-image-wrap
+              =image_tag procedure.image, class: "img-wrapper", size: "150x150"
+            %h3.step-desc
+              %span.text-p
+                =procedure.description
