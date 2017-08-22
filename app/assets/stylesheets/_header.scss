@@ -98,6 +98,34 @@ a {
   line-height: 60px;
   font-size: 15px;
 }
+.category_search_list {
+  padding-left: 0;
+  li {
+    padding-left: 0;
+    border-left: none;
+    display: inline-block;
+    font-size: 14px;
+    padding: 0 16px;
+    border-right: 1px solid #EEE;
+  }
+}
+#search_box {
+  float: left;
+  vertical-align: middle;
+  margin: 10px 0 0 0;
+  line-height: 60px;
+}
+#search_box input {
+    padding: 0 6px 0 6px;
+    width: 180px;
+    height: 40px;
+    color: #5e5e5e;
+    font-size: 14px;
+    background: #EEE;
+    border: none;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
   #user_sign_in {
     margin: 0 10px;
     float: right;

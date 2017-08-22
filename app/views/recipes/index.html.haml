@@ -4,15 +4,7 @@
     #content
       .content-inner.row
         .left-content.col-md-8
-          .category_search
-            #h2.headline-title.header-separator
-              レシピを探す
-            %ul.category_search_list
-              #search_box{"data-device" => "pc"}
-                %form{"accept-charset" => "UTF-8", :action => "/search", :method => "get"}
-                  %input{:name => "utf8", :type => "hidden", :value => "✓"}/
-                  %input#query{:autocomplete => "off", :name => "query", :placeholder => "レシピを検索", :type => "text"}/
-                  %img{:alt => "Search icon", :src => "//assets.kurashiru.com/production/assets/search-icon-f33163e1e369a9c6da9ddcc72aee10a8e16f9c94b2a0b3ac9e415d2a44a3a48d.png"}/
+
           #h2.headline-title.header-separator
             新着レシピ
           .recipes-list.row
