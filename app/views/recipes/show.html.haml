@@ -26,11 +26,11 @@
       %h2
         %span.text-h2
           料理手順
-      -@recipe.procedures.each do |procedure|
+      -@recipe.procedures.each_with_index do |procedure, i|
         .steps
           .step
             %p.step-num
-              1.
+              = "#{i + 1}"
             .step-image-wrap
               =image_tag procedure.image, class: "img-wrapper", size: "150x150"
             %h3.step-desc
