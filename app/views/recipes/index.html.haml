@@ -28,8 +28,6 @@
                     .image-list-introduction
                       %p=recipe.description
                     .image-list-ingredient
-                      -recipe.raw_materials.each do |material|
-                        =material.material
           .text-center
             .recipe_paginate
               =paginate(@recipes)
