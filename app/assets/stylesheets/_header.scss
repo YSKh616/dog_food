@@ -37,6 +37,16 @@ a {
   height: 20px;
   background-color: white;
 }
+.user_sign_in {
+  width: 970px;
+  margin: 0 auto;
+  li {
+    list-style: none;
+    float: right;
+    font-weight: bold;
+    font-size: 15px;
+  }
+}
 .container {
   width: 940px;
   margin: 0 auto;
@@ -86,7 +96,7 @@ a {
   border: none;
   vertical-align: middle;
   line-height: 60px;
-  font-size: 18px;
+  font-size: 15px;
 }
   #user_sign_in {
     margin: 0 10px;
@@ -105,7 +115,7 @@ a {
     border: none;
     cursor: pointer;
   }
-  .link a {
+  #new_recipes a {
     float: right;
     display: inline-block;
     padding: 10px 10px;

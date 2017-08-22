@@ -1,5 +1,14 @@
 %header.navbar.navbar-fixed-top
   .loginbar
+    .user_sign_in
+      %li.link
+        -if user_signed_in?
+          %a
+            =link_to destroy_user_session_path, method: :delete do
+              ログアウト
+        -else
+          =link_to new_user_session_path, method: :get do
+            ユーザー登録（無料）/ログイン
   .container
     .navbar-header
       %img{src: "/uploads/wango_logo/image/", width: "80px", height: "80px"}
@@ -7,15 +16,6 @@
       ワンご
     %span.wango_statement
       みんなでシェアしよう。手づくり”ワンちゃんごはん”レシピ
-    / #user_sign_in
-    /   %li.link
-    /     -if user_signed_in?
-    /       %a
-    /         =link_to destroy_user_session_path, method: :delete do
-    /           ログアウト
-    /     -else
-    /       =link_to new_user_session_path, method: :get do
-    /         ログイン
     #new_recipes
       %li.link
         =link_to new_recipe_path, method: :get do
