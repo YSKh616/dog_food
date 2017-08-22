@@ -11,7 +11,8 @@
             ユーザー登録（無料）/ログイン
   .container
     .navbar-header
-      %img{src: "/uploads/wango_logo/image/", width: "80px", height: "80px"}
+      =link_to root_path method: :get do
+        %img{src: "/uploads/wango_logo/image/", width: "80px", height: "80px"}
     %span.wango_title
       ワンご
     %span.wango_statement
