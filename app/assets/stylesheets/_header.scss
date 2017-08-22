@@ -26,6 +26,17 @@ div, h1, a, form {
 a {
   text-decoration: none;
 }
+.navbar {
+  width: 100%;
+  border-bottom: 1px solid #cfcfcf;
+  background-color: #e0ffc1;
+  opacity: 0.9;
+  }
+.loginbar {
+  width: 100%;
+  height: 20px;
+  background-color: white;
+}
 .container {
   width: 940px;
   margin: 0 auto;
@@ -48,13 +59,6 @@ a {
     font-size: 20px;
   }
 }
-.navbar {
-  width: 100%;
-  padding: 10px 0;
-  border-bottom: 1px solid #cfcfcf;
-  background-color: #e0ffc1;
-  opacity: 0.9;
-  }
 .navbar-header {
   opacity: 1.0;
   img {
