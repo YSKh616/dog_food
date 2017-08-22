@@ -26,6 +26,28 @@ div, h1, a, form {
 a {
   text-decoration: none;
 }
+.container {
+  width: 940px;
+  margin: 0 auto;
+  // span {
+  //   margin-left: 20px;
+  //   margin-top: 15px;
+  //   font-size: 40px;
+  //   color: #008000;
+  //   line-height: 60px;
+  //   vertical-align: middle;
+  //   font-weight: bold;
+  //   width: 150px;
+  //   display: inline-block;
+  // }
+  a {
+    color: #008000;
+    line-height: 60px;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
 .navbar {
   width: 100%;
   padding: 10px 0;
@@ -39,28 +61,28 @@ a {
   display: block;
   }
 }
-.container {
-  width: 940px;
-  margin: 0 auto;
-  span {
-    margin-left: 20px;
-    margin-top: 15px;
-    font-size: 40px;
-    color: #008000;
-    line-height: 60px;
-    vertical-align: middle;
-    font-weight: bold;
-    width: 200px;
-    display: inline-block;
-  }
-  a {
-    color: #008000;
-    line-height: 60px;
-    margin-left: 20px;
-    vertical-align: middle;
-    font-weight: bold;
-    font-size: 20px;
-  }
+.wango_title {
+  margin-left: 20px;
+  margin-top: 15px;
+  font-size: 40px;
+  color: #008000;
+  line-height: 60px;
+  vertical-align: middle;
+  font-weight: bold;
+  width: 150px;
+  display: inline-block;
+  float: left;
+}
+.wango_statement {
+  margin: 10px 10px 0 0;
+  float: left;
+  list-style: none;
+  display: inline-block;
+  border-radius: 8px;
+  border: none;
+  vertical-align: middle;
+  line-height: 60px;
+  font-size: 18px;
 }
   #user_sign_in {
     margin: 0 10px;
