@@ -2,37 +2,42 @@
 #wrapper
   .recipe_detail
     .recipe_detail_content.row
-      .recipe_detail_image.col-md-6
-        .recipe_image
-          =image_tag @recipe.image, size: "380x320"
-      .recipe_detail_main_info.col-md-6
-        .recipe_title
-          %h1.title
-            %span
-              =@recipe.title
-        %p.description
-          =@recipe.description
-        %h2.ingredient_header
-          %span.text-h2
-            材料
-        %ul.ingredient_list
-          -@recipe.raw_materials.each do |raw_material|
-            %li.ingredient
+      .recipe_detail_left
+        .recipe_detail_image
+          .recipe_image
+            =image_tag @recipe.image, size: "540x320"
+      .recipe_detail_right
+        .recipe_detail_user
+          user's information
+        .recipe_detail_main_info
+          .recipe_title
+            %h1.title
               %span
-                =raw_material.material
-              %span.ingredient_serving
-                =raw_material.quantity
+                =@recipe.title
+          %p.description
+            =@recipe.description
+          %h2.ingredient_header
+            %span.text-h2
+              材料
+          %ul.ingredient_list
+            -@recipe.raw_materials.each do |raw_material|
+              %li.ingredient
+                %span
+                  =raw_material.material
+                %span.ingredient_serving
+                  =raw_material.quantity
     .recipe_steps
-      %h2
-        %span.text-h2
-          料理手順
-      -@recipe.procedures.each_with_index do |procedure, i|
-        .steps
+      .recipe_step-text
+        %h2
+          %span.step-text
+            料理手順
+      .steps
+        -@recipe.procedures.each_with_index do |procedure, i|
           .step
-            %p.step-num
-              = "手順.#{i + 1}"
+            %p.step-text
+              = "#{i + 1}"
             .step-image-wrap
-              =image_tag procedure.image, class: "img-wrapper", size: "250x250"
+              =image_tag procedure.image, class: "img-wrapper", size: "350x300"
             %h3.step-desc
               %span.text-p
                 =procedure.description
