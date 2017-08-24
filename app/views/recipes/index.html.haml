@@ -14,7 +14,7 @@
               .image-list-content.col-sm-4.col-xs-12
                 =link_to "/recipes/#{recipe.id}", method: :get do
                   .image-list-model
-                    =image_tag recipe.image_url, class: "img-responsive img-rounded"
+                    =image_tag recipe.image, class: "img-responsive img-rounded"
                   .image-list-info
                     .image-list-title
                       %p.model-trigger
