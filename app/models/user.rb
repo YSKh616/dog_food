@@ -5,4 +5,6 @@ class User < ApplicationRecord
   has_many :recipes
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+  accepts_nested_attributes_for :dogs
+  mount_uploader :image, ImageUploader
 end
