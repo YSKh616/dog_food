@@ -1,0 +1,18 @@
+ja:
+  activerecord:
+    attributes:
+      models:
+        recipe: レシピ
+        procedure: 手順
+        raw_material: 材料
+      attributes:
+        recipe:
+          title: タイトル
+          image: 画像
+          description: 説明
+        procedure:
+          description: 説明
+          image: 材料
+        raw_material:
+          material: 材料
+          quantity: 量

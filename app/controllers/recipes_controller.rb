@@ -13,8 +13,12 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.new(recipe_params)
-    @recipe.save
-    redirect_to root_path
+    if @recipe.save
+      redirect_to root_path
+    else
+      flash.now[:alert] = '未入力の項目があります'
+      render :new
+    end
   end
 
   def show
