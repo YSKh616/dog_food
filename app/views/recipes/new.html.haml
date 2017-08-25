@@ -2,9 +2,15 @@
 #wrapper
   #top
     #content.recipe_content
+      - if @recipe.errors.any?
+        .recipe_errors
+          %ul
+            -@recipe.errors.full_messages.each do |message|
+              %li
+                =message
       = form_for @recipe do |f|
         .recipe_content_inner.row
-          .links_for_list_author.col-md-6
+          .links_for_list_author
             .box_title
               レシピタイトル
             .set_recipe_title
@@ -17,7 +23,7 @@
             .set_recipe_description
               %a レシピ内容
               = f.text_field :description, placeholder: "キャッチコピー、簡単な説明を入力して下さい", class: "set_recipe_description__input"
-          .raw_material_input_form.col-md-6
+          .raw_material_input_form
             %p.raw_material_title
               材料
             .raw_material_box
