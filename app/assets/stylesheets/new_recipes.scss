@@ -8,6 +8,19 @@
     width: 100%;
     background: #FFF;
 }
+.recipe_errors {
+  background-color: #fff9f5;
+  border:1px solid #ff0000;
+  width: 1170px;
+  ul {
+    margin: 0 auto;
+    margin-top: 17px;
+    margin-bottom: 17px;
+    list-style: none;
+    color: #ff0000;
+  }
+}
+
 .recipe_content_inner {
   padding: 10px 10px 0 10px;
   background-color: #F1F1F2;
@@ -100,6 +113,8 @@ input {
   border: 5px solid #e3dcca;
   border-radius: 5px;
   padding: 20px;
+  width: 380px;
+  margin-left: 150px;
 }
 .raw_material_list {
   margin: 0 auto;
@@ -175,7 +190,7 @@ input {
   float: left;
 }
 .procedures_list {
-  display: inline-block;
+  // display: inline-block;
 }
 .procedure_add_button {
   cursor: pointer;
