@@ -17,7 +17,7 @@
                       #{current_user.name}さんのマイページ
                 %td.profile_edit_button
                   %h1
-                    =link_to '/users/#{current_user.id}/edit', method: :get do
+                    =link_to '/users/:user_id/edit', method: :get do
                       プロフィール編集
           .profile_list
             %table

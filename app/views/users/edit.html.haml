@@ -8,41 +8,39 @@
         ユーザー情報
     .form-wrapper
       .user-edit__name
+        %h2
+          ユーザー名
         = f.text_field :name, placeholder: "名前", class: "user-edit__form"
     .form-wrapper
-      .user-edit__age
-        = f.text_field :age, placeholder: "年齢", class: "user-edit__form"
-    .form-wrapper
       .user-edit__image
-        %span.user-edit__image__text 画像
+        %span.user-edit__image__text トップ画像
         %span.user-edit__image__form
           = f.file_field :image, class: ".user-edit__form__image"
     .form-wrapper
       .user-edit__email
+        %h2
+          email
         = f.text_field :email, placeholder: "メールアドレス", class: "user-edit__form"
     .form-wrapper
+      .user-edit__sex
+        %h2
+          性別
+        = f.text_field :sex, class: "user-edit__form"
+    .form-wrapper
+      .user-edit__age
+        %h2
+          年齢
+        = f.text_field :age, placeholder: "年齢", class: "user-edit__form"
+    .form-wrapper
       .user-edit__area
-        //= f.collection_select :area, class: “user-edit__form”
+        %h2
+          居住エリア
         = f.text_field :area, placeholder: "地域", class: "user-edit__form"
-
-      .dog-register
-        = f.fields_for :dogs do |d|
-
-
-          .dog-register-wrapper
-            .dog-register__frame
-              .form-wrapper
-                .dog-register__title 犬情報
-              .form-wrapper
-                .dog-register__name
-                  = d.text_field :name, placeholder: "名前", class: "dog-register__form"
-              .form-wrapper
-                .dog-register__type
-                  = d.text_field :type, placeholder: "犬種", class: "dog-register__form"
-              .form-wrapper
-                .dog-register__age
-                  = d.text_field :age, placeholder: "年齢", class: "dog-register__form"
-
+    .form-wrapper
+      .user-edit__area
+        %h2
+          自己紹介
+        = f.text_field :introduction, class: "user-edit__form"
     .user-edit-footer.clearfix
       .user-edit-footer__form
         = f.submit "保存する", class: "user-edit-footer__form__button", name: "commit"
