@@ -20,5 +20,50 @@
                     =link_to '/users/#{current_user.id}/edit', method: :get do
                       プロフィール編集
           .profile_list
+            %tr
+              %td
+                ユーザー名
+              -if current_user.name
+                %td
+                  =current_user.name
+              -else
+                %td
+                  登録されていません。
+            %tr
+              %td
+                メールアドレス
+              -if current_user.email
+                %td
+                  =current_user.email
+              -else
+                %td
+                  登録されていません。
+            %tr
+              %td
+                性別
+              -if current_user.sex
+                %td
+                  =current_user.sex
+              -else
+                %td
+                  登録されていません。
+            %tr
+              %td
+                お住まい
+              -if current_user.area
+                %td
+                  =current_user.area
+              -else
+                %td
+                  登録されていません。
+            %tr
+              %td
+                自己紹介
+              -if current_user.introduction
+                %td
+                  =current_user.introduction
+              -else
+                %td
+                  登録されていません。
         .user_pet_information
 
