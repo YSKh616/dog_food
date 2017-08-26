@@ -64,6 +64,7 @@
 }
 
 .pet_information_header {
+  width: 100%;
   h2 {
     font-size: 20px;
     float:left;
@@ -87,4 +88,10 @@
   span:hover {
     text-decoration: none;
   }
+}
+.pet_information_alert {
+  text-align: center;
+  background: #fdfbf9;
+  padding: 16px;
+  float: left;
 }

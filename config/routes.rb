@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'recipes#index'
-  resources :users, only: [:show, :edit, :update]
+  resources :users, only: [:show, :edit, :update] do
+    resources :dogs, only: [:new, :create, :edit, :update]
+  end
   resources :recipes, only: [:show, :create, :new, :edit, :update] do
     resources :raw_materials, only: [:create]
   end

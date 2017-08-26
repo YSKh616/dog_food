@@ -71,7 +71,8 @@
             %h2
               #{current_user.name}さんのペット
             %p.add_pet_button
-              %a.plus_pet
+              =link_to '/users/:user_id/dogs/new', method: :get do
                 %span
                   ペットを追加
-
+          .pet_information_alert
+            投稿はまだありません。
