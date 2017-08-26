@@ -1,5 +1,5 @@
 ja:
-  activerecord:
+  activemodel:
     models:
       recipe: レシピ
       procedure: 手順
