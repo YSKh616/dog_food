@@ -62,3 +62,29 @@
     width: 800px;
   }
 }
+
+.pet_information_header {
+  h2 {
+    font-size: 20px;
+    float:left;
+  }
+}
+.add_pet_button {
+  float: left;
+  margin-top: 15px;
+  margin-left: 60px;
+}
+.plus_pet {
+  display: inline-block;
+  background: #f9e6b8 none repeat scroll 0 0;
+  border-radius: 30px;
+  color: #715847;
+  font-size: 13px;
+  padding: 6px 16px;
+  font-weight: bold;
+  border: 1px solid #b8a58a;
+  box-shadow: 1px 1px 0 #b8a58a;
+  span:hover {
+    text-decoration: none;
+  }
+}
