@@ -1,0 +1,71 @@
+.user-edit {
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 200px;
+  border: 1px solid #666;
+  &__title {
+    font-size: 24px;
+    color: #666;
+  }
+
+  &__form {
+    width: 230px;
+    height: 30px;
+    border-bottom : 1px solid #666;
+    &__image {
+      width: 230px;
+      height: 30px;
+    }
+  }
+  &__image {
+    font-size: 16px;
+    color: #666;
+  }
+}
+
+.form-wrapper {
+  margin: 12px;
+}
+
+.dog-register {
+  height: 200px;
+  margin: 50px;
+  &__title {
+    font-size: 24px;
+    color: #666;
+  }
+  &__form {
+    width: 230px;
+    height: 30px;
+    border-bottom : 1px solid #666;
+  }
+}
+
+.dog-register-wrapper {
+  float: left;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #666;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.user-edit-footer {
+  height: 50px;
+  &__form {
+    width: 230px;
+    margin: 0 auto;
+    &__button {
+      width: 230px;
+      height: 30px;
+      margin: 0 auto;
+      background-color: red;
+      color: #666;
+      font-size: 20px;
+    }
+  }
+}
