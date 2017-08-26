@@ -28,8 +28,8 @@
         .right-content.col-md-4
           -if user_signed_in?
             .user_information
-              =link_to "/users/#{current_user.id}/edit", method: :get do
-                ユーザー情報登録/編集
+              =link_to "/users/#{current_user.id}", method: :get do
+                マイページ
           .right-sidebar-header-separator
             %h2.headline-title
               特集
