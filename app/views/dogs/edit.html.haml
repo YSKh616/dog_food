@@ -6,23 +6,23 @@
         .pet_input_header
           %h1
             %span
-              ペットの登録
+              わんちゃんの登録
         .pet_input_form
-          = form_for @dog, :url => {:action => :create} do |f|
+          = form_for @dog, :url => {:action => :update} do |f|
             %dl.line
-              ペットのお名前
+              わんちゃんのお名前
               %span
                 必須
             %dd
               = f.text_field :name, class: "textbox"
             %dl.line
-              ペットの画像
+              わんちゃんの画像
               %span
                 必須
             %dd
               = f.file_field :image, class: ".pet__form__image"
             %dl.line
-              ペットの年齢
+              わんちゃんの年齢
               %span
                 必須
             %dd

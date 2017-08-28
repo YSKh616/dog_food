@@ -17,7 +17,7 @@
                       #{current_user.name}さんのマイページ
                 %td.profile_edit_button
                   %h1
-                    =link_to '/users/:user_id/edit', method: :get do
+                    =link_to '/users/#{current_user.id}/edit', method: :get do
                       プロフィール編集
           .profile_list
             %table
@@ -69,28 +69,93 @@
         .user_pet_information
           .pet_information_header
             %h2
-              #{current_user.name}さんのペット
+              #{current_user.name}さんのわんちゃん
             %p.add_pet_button
               =link_to "/users/:user_id/dogs/new", method: :get do
                 %span
-                  ペットを追加
+                  わんちゃんを追加
           -if current_user.dogs
             -@dogs.each do |dog|
               .pet_information_detail
                 .pet_image
-                  =image_tag "https://s3-ap-northeast-1.amazonaws.com/image-upload-wango/uploads/wango_logo/image/wango_logo.png", size: "80x80"
-                .pet_detail_information
-                  .pet_name_edit
-                    %a= dog.name + "ちゃん"
-                    =link_to "/users/#{current_user.id}/dogs/#{dog.id}/edit", method: :get do
-                      編集
-                  .pet_item_information
-                    %dl
-                      %dd= "年齢： " + dog.age.to_s + "歳 /"
-                      %dd= "犬種： " + dog.type + " /"
-                      %dd= "性別： " + dog.sex + " /"
-                      %dd= "アレルギー： " + dog.allergy + " /"
-                      %dd= "既往歴： " + dog.medicalhistory
+                  =image_tag dog.image, size: "80x80"
+                =link_to "/users/#{current_user.id}/dogs/#{dog.id}/edit", method: :get do
+                  編集
+              .profile_list
+                %table
+                  %tr
+                    %td.item_name
+                      わんちゃんの名前
+                    -if dog.name
+                      %td.user_status
+                        =dog.name
+                    -else
+                      %td.user_status
+                        登録されていません。
+                  %tr
+                    %td.item_name
+                      年齢
+                    -if dog.age
+                      %td.user_status
+                        =dog.age
+                    -else
+                      %td.user_status
+                        登録されていません。
+                  %tr
+                    %td.item_name
+                      犬種
+                    -if dog.type
+                      %td.user_status
+                        =dog.type
+                    -else
+                      %td.user_status
+                        登録されていません。
+                  %tr
+                    %td.item_name
+                      性別
+                    -if dog.sex
+                      %td.user_status
+                        =dog.sex
+                    -else
+                      %td.user_status
+                        登録されていません。
+                  %tr
+                    %td.item_name
+                      アレルギー
+                    -if dog.allergy
+                      %td.user_status
+                        =dog.allergy
+                    -else
+                      %td.user_status
+                        登録されていません。
+                  %tr
+                    %td.item_name
+                      既往歴
+                    -if dog.medicalhistory
+                      %td.user_status
+                        =dog.medicalhistory
+                    -else
+                      %td.user_status
+                        登録されていません。
           -else
             .pet_information_alert
-              ペットは登録されていません。
+              わんちゃんは登録されていません。
+        .user_recipe_information
+          .recipe_information_header
+            %h2
+              #{current_user.name}さんのレシピ一覧
+            %p.add_pet_button
+              =link_to "/recipes/new", method: :get do
+                %span
+                  新しいレシピを作成
+          -if current_user.recipes
+            -@recipes.each do |recipe|
+              .user_recipe_list
+                .user_recipe_img
+                  %a
+                    =image_tag recipe.image, size: "80x80"
+                  =link_to "/recipes/#{recipe.id}", method: :get do
+                    =recipe.title
+                  %h2
+                    =link_to "/recipes/#{recipe.id}/edit", method: :get do
+                      編集

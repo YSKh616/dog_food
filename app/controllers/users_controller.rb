@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
   def show
     @dogs = current_user.dogs
+    @recipes = current_user.recipes
   end
 
   def edit

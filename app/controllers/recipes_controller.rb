@@ -21,6 +21,22 @@ class RecipesController < ApplicationController
     end
   end
 
+  def edit
+    @recipe = Recipe.find(params[:id])
+    @raw_materials = @recipe.raw_materials
+    @procedures = @recipe.procedures
+  end
+
+  def update
+    @recipe = Recipe.find(params[:id])
+    if @recipe.update(recipe_params)
+      redirect_to user_path
+    else
+      flash.now[:alert] = '未入力の項目があります'
+      render :update
+    end
+  end
+
   def show
     @recipe = Recipe.find(params[:id])
   end
