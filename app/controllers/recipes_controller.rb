@@ -28,7 +28,6 @@ class RecipesController < ApplicationController
   end
 
   def update
-    binding.pry
     @recipe = Recipe.find(params[:id])
     if @recipe.update(recipe_params)
       redirect_to user_path
