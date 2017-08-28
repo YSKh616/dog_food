@@ -27,7 +27,7 @@
             %p.raw_material_title
               材料
             .raw_material_box
-              = f.fields_for :@raw_materials do |r|
+              = f.fields_for :raw_materials do |r|
                 .raw_material_list
                   .list_header
                     %span.name
@@ -44,7 +44,7 @@
                   材料を追加
           .procedure_input_form
             .procedure_box
-              = f.fields_for :@procedures do |pr|
+              = f.fields_for :procedures do |pr|
                 .procedures_list
                   .procedure_header
                     %a

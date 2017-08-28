@@ -23,8 +23,8 @@ class RecipesController < ApplicationController
 
   def edit
     @recipe = Recipe.find(params[:id])
-    @raw_materials = @recipe.raw_materials
-    @procedures = @recipe.procedures
+    @recipe.raw_materials.build
+    @recipe.procedures.build
   end
 
   def update
@@ -52,6 +52,7 @@ class RecipesController < ApplicationController
   def move_to_index
     redirect_to action: :index unless user_signed_in?
   end
+
   def recipe_params
     params.require(:recipe).permit(:title, :image, :description, raw_materials_attributes: [:id, :material, :quantity], procedures_attributes: [:id, :image, :description]).merge(user_id: current_user.id)
   end
