@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
   resources :recipes, only: [:show, :create, :new, :edit, :update, :destroy] do
     resources :raw_materials, only: [:create]
+    resources :procedures, only: [:create]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

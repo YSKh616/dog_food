@@ -1,71 +1,62 @@
 = render "layouts/header"
-#wrapper
+#wrapper.new_recipe_wrapper
   #top
-    #content.recipe_content
-      - if @recipe.errors.any?
-        .recipe_errors
-          %ul
-            -@recipe.errors.full_messages.each do |message|
-              %li
-                =message
-      = form_for @recipe do |f|
-        .recipe_content_inner.row
-          .links_for_list_author
-            .box_title
-              レシピタイトル
-            .set_recipe_title
-              = f.text_field :title, class: "set_recipe_title__input"
-            .set_recipe_image
-              %a 画像
-              %img#img_prev.img-thumbnail.hide{height: "100px", width: "100px"}
-              =f.label :recipe_image
-              = f.file_field :image, placeholder: "人や人物が映り込んだ写真、オリジナルでないものはご遠慮下さい"
-            .set_recipe_description
-              %a レシピ内容
-              = f.text_field :description, placeholder: "キャッチコピー、簡単な説明を入力して下さい", class: "set_recipe_description__input"
-          .raw_material_input_form
-            %p.raw_material_title
-              材料
-            .raw_material_box
-              = f.fields_for :raw_materials do |r|
-                .raw_material_list
-                  .list_header
-                    %span.name
-                      材料
-                    %span.quantity
-                      分量
-                  .edit_raw_material_list
-                    %span
-                      =r.text_field :material, placeholder: "例）鶏肉", class: "edit_name"
-                    %span
-                      =r.text_field :quantity, placeholder: "例) 100g", class: "edit_quantity"
-                  .edit_raw_material_list
-                    %span
-                      =r.text_field :material, class: "edit_name"
-                    %span
-                      =r.text_field :quantity, class: "edit_quantity"
-                  .edit_raw_material_list
-                    %span
-                      =r.text_field :material, class: "edit_name"
-                    %span
-                      =r.text_field :quantity, class: "edit_quantity"
-              .material_add_button
+    .content
+      .content_top
+        - if @recipe.errors.any?
+          .recipe_errors
+            %ul
+              -@recipe.errors.full_messages.each do |message|
+                %li
+                  =message
+        = form_for @recipe do |f|
+          .recipe_content_inner.row
+            .links_for_list_author
+              .box_title
+                レシピタイトル
+              .set_recipe_title
+                = f.text_field :title, class: "set_recipe_title__input"
+              .set_recipe_image
+                %a 画像
+                %img#img_prev.img-thumbnail.hide{height: "100px", width: "100px"}
+                =f.label :recipe_image
+                = f.file_field :image, placeholder: "人や人物が映り込んだ写真、オリジナルでないものはご遠慮下さい"
+              .set_recipe_description
+                %a レシピ内容
+                = f.text_area :description, placeholder: "キャッチコピー、簡単な説明を入力して下さい", class: "set_recipe_description__input", rows: "7"
+            .raw_material_input_form
+              %p.raw_material_title
+                材料
+              .raw_material_box
+                = f.fields_for :raw_materials do |r|
+                  .raw_material_list
+                    .list_header
+                      %span.name
+                        材料
+                      %span.quantity
+                        分量
+                    .edit_raw_material_list
+                      %span
+                        =r.text_field :material, placeholder: "例）鶏肉", class: "edit_name"
+                      %span
+                        =r.text_field :quantity, placeholder: "例) 100g", class: "edit_quantity"
+                .material_add_button
+                  %a
+                    材料を追加
+            .procedure_input_form
+              .procedure_box
+                = f.fields_for :procedures do |pr|
+                  .procedures_list
+                    .procedure_header
+                      %a
+                        手順.1
+                    .procedure_image
+                      %img#procedure_0_prev.procedure-thumbnail.hide{height: "100px", width: "100px"}
+                      =pr.file_field :image
+                    .procedure_description
+                      =pr.text_field :description, placeholder: "手順の説明"
+              .procedure_add_button
                 %a
-                  材料を追加
-          .procedure_input_form
-            .procedure_box
-              = f.fields_for :procedures do |pr|
-                .procedures_list
-                  .procedure_header
-                    %a
-                      手順.1
-                  .procedure_image
-                    %img#procedure_0_prev.procedure-thumbnail.hide{height: "100px", width: "100px"}
-                    =pr.file_field :image
-                  .procedure_description
-                    =pr.text_field :description, placeholder: "手順の説明"
-            .procedure_add_button
-              %a
-                手順を追加
-            .send_recipe
-              = f.submit "投稿する", class: "send_recipe__button", name: "commit"
+                  手順を追加
+              .send_recipe
+                = f.submit "投稿する", class: "send_recipe__button", name: "commit"

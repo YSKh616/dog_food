@@ -1,16 +1,14 @@
 #wrapper {
   width: 100%;
-  margin: 0 auto;
   padding-top: 170px;
   background-color: #fff;
 }
 .recipe_detail {
   width: 100%;
 }
-.recipe_detail_left {
-
+.recipe_detail_content {
+  margin: 0 auto;
 }
-
 .recipe_detail_image {
   flex-basis: 320px;
   box-sizing: border-box;
