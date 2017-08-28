@@ -81,6 +81,8 @@
                   =image_tag dog.image, size: "80x80"
                 =link_to "/users/#{current_user.id}/dogs/#{dog.id}/edit", method: :get do
                   編集
+                =link_to "/users/#{current_user.id}/dogs/#{dog.id}", confirm: "削除してよろしいですか？", method: :delete do
+                  削除
               .profile_list
                 %table
                   %tr
@@ -156,6 +158,8 @@
                     =image_tag recipe.image, size: "80x80"
                   =link_to "/recipes/#{recipe.id}", method: :get do
                     =recipe.title
+                  =link_to "/recipes/#{recipe.id}", method: :delete do
+                    削除
                   %h2
                     =link_to "/recipes/#{recipe.id}/edit", method: :get do
                       編集
