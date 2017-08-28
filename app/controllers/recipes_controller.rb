@@ -28,6 +28,7 @@ class RecipesController < ApplicationController
   end
 
   def update
+    binding.pry
     @recipe = Recipe.find(params[:id])
     if @recipe.update(recipe_params)
       redirect_to user_path
@@ -41,6 +42,13 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
   end
 
+  def destroy
+    @recipe = Recipe.find(params[:id])
+    if @recipe.user_id == current_user.id
+      @recipe.destroy
+      redirect_to '/users/current_user.id'
+    end
+  end
   private
   def move_to_index
     redirect_to action: :index unless user_signed_in?

@@ -1,7 +1,7 @@
 class Recipe < ApplicationRecord
   belongs_to :user
-  has_many :procedures
-  has_many :raw_materials
+  has_many :procedures, dependent: :destroy
+  has_many :raw_materials, dependent: :destroy
 
   validates :title, presence: true
   validates :image, presence: true

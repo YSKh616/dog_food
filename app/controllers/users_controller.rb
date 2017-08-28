@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   def show
     @dogs = current_user.dogs
-    @recipes = current_user.recipes
+    @recipes = current_user.recipes.order("created_at DESC")
   end
 
   def edit
