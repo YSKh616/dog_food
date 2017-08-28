@@ -1,4 +1,5 @@
 class DogsController < ApplicationController
+
   def new
     @dog = Dog.new
   end
@@ -10,6 +11,21 @@ class DogsController < ApplicationController
     else
       flash.now[:alert] = '未入力の項目があります'
       render :new
+    end
+  end
+
+  def edit
+    @dog = Dog.find(params[:id])
+  end
+
+  def update
+    @dog = Dog.find(params[:id])
+    if @dog.user_id == current_user.id
+      @dog.update(dog_params)
+      redirect_to '/users/current_user.id'
+    else
+      flash.now[:alert] = '未入力の項目があります'
+      render :edit
     end
   end
 

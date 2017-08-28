@@ -67,11 +67,10 @@
   width: 100%;
   h2 {
     font-size: 20px;
-    float:left;
+    // float:left;
   }
 }
 .add_pet_button {
-  float: left;
   margin-top: 15px;
   margin-left: 60px;
 }
@@ -93,5 +92,22 @@
   text-align: center;
   background: #fdfbf9;
   padding: 16px;
-  float: left;
+  position: relative;
+}
+.pet_information_detail {
+  background: #fdfbf9;
+  padding: 16px;
+  border-radius: 4px;
+  position: relative;
+}
+.pet_image {
+  display: inline-block;
+}
+.pet_detail_information {
+  display: inline-block;
+}
+.pet_item_information{
+  dd{
+    display: inline-block;
+  }
 }

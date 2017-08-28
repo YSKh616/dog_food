@@ -71,8 +71,26 @@
             %h2
               #{current_user.name}さんのペット
             %p.add_pet_button
-              =link_to '/users/:user_id/dogs/new', method: :get do
+              =link_to "/users/:user_id/dogs/new", method: :get do
                 %span
                   ペットを追加
-          .pet_information_alert
-            投稿はまだありません。
+          -if current_user.dogs
+            -@dogs.each do |dog|
+              .pet_information_detail
+                .pet_image
+                  =image_tag "https://s3-ap-northeast-1.amazonaws.com/image-upload-wango/uploads/wango_logo/image/wango_logo.png", size: "80x80"
+                .pet_detail_information
+                  .pet_name_edit
+                    %a= dog.name + "ちゃん"
+                    =link_to "/users/#{current_user.id}/dogs/#{dog.id}/edit", method: :get do
+                      編集
+                  .pet_item_information
+                    %dl
+                      %dd= "年齢： " + dog.age.to_s + "歳 /"
+                      %dd= "犬種： " + dog.type + " /"
+                      %dd= "性別： " + dog.sex + " /"
+                      %dd= "アレルギー： " + dog.allergy + " /"
+                      %dd= "既往歴： " + dog.medicalhistory
+          -else
+            .pet_information_alert
+              ペットは登録されていません。

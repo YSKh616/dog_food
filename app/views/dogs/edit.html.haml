@@ -1,0 +1,55 @@
+= render "layouts/header"
+#wrapper
+  #top
+    #content
+      .content-inner
+        .pet_input_header
+          %h1
+            %span
+              ペットの登録
+        .pet_input_form
+          = form_for @dog, :url => {:action => :create} do |f|
+            %dl.line
+              ペットのお名前
+              %span
+                必須
+            %dd
+              = f.text_field :name, class: "textbox"
+            %dl.line
+              ペットの画像
+              %span
+                必須
+            %dd
+              = f.file_field :image, class: ".pet__form__image"
+            %dl.line
+              ペットの年齢
+              %span
+                必須
+            %dd
+              = f.text_field :age, class: ".pet__form__age"
+            %dl.line
+              犬種
+              %span
+                必須
+            %dd
+              = f.text_field :type, class: ".pet__form__type"
+            %dl.line
+              性別
+              %span
+                必須
+            %dd
+              = f.text_field :sex, class: ".pet__form__sex"
+            %dl.line
+              アレルギー
+              %span
+                必須
+            %dd
+              = f.text_field :allergy, class: ".pet__form__allergy"
+            %dl.line
+              既往歴
+              %span
+                必須
+            %dd
+              = f.text_field :medicalhistory, class: ".pet__form__medical"
+            .submit_form
+              = f.submit "登録する", class: "pet_registration__button", name: "commit"

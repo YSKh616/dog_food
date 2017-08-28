@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   def show
+    @dogs = current_user.dogs
   end
 
   def edit
