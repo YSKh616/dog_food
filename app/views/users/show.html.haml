@@ -154,11 +154,12 @@
               .user_recipe_list
                 .user_recipe_img
                   %a
-                    =image_tag recipe.image, size: "80x80"
+                    =image_tag recipe.image, size: "80x80", class: "profile_image"
                   =link_to "/recipes/#{recipe.id}", method: :get do
                     =recipe.title
-                  =link_to "/recipes/#{recipe.id}/edit", method: :get do
-                    編集
-                  =link_to "/recipes/#{recipe.id}", method: :delete do
+                  =link_to "/recipes/#{recipe.id}", class: "recipe_button",method: :delete do
                     削除
+                  =link_to "/recipes/#{recipe.id}/edit", class: "recipe_button", method: :get do
+                    編集
+
 = render "layouts/footer"
