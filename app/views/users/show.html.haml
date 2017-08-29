@@ -17,7 +17,7 @@
                       #{current_user.name}さんのマイページ
                 %td.profile_edit_button
                   %h1
-                    =link_to '/users/#{current_user.id}/edit', method: :get do
+                    =link_to edit_user_path, method: :get do
                       プロフィール編集
           .profile_list
             %table
@@ -162,4 +162,4 @@
                     編集
                   =link_to "/recipes/#{recipe.id}", method: :delete do
                     削除
-
+= render "layouts/footer"
