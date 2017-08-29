@@ -10,6 +10,13 @@
     height: 100%;
   }
 }
+.profile_header {
+  margin:0 30px;
+  padding: 16px;
+}
+.profile_image {
+  border-radius: 40px;
+}
 .profile_name {
   display: inline-block;
   margin-left: 10px;
@@ -18,10 +25,11 @@
 }
 }
 .profile_edit_button {
-  display: inline-block;
+  // display: inline-block;
+  float: right;
   margin-left: 40px;
   a{
-    font-size: 16px;
+    font-size: 20px;
     font-style: bold;
     vertical-align: middle;
     border-radius: 4px;
@@ -32,8 +40,8 @@
     background: #f0f6da;
     border: 2px solid #65ab31;
     height: 36px;
-    line-height: 34px;
-    width: 170px;
+    line-height: 36px;
+    width: 190px;
     padding-bottom: 1px;
   }
   a:hover {
@@ -46,10 +54,11 @@
   background-color: #fff;
   tr {
     border-bottom: 1px solid #eae9e7;
+    width: 100px;
   }
   .item_name {
     width: 200px;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
     color: #725947;
     background: #f5f4f3;
@@ -59,19 +68,48 @@
   .user_status {
     padding: 18px 0 18px 16px;
     width: 800px;
+    font-size: 18px;
   }
 }
 
 .pet_information_header {
   width: 100%;
+  padding-left: 30px;
   h2 {
-    font-size: 20px;
+    font-size: 25px;
     // float:left;
+  }
+}
+.user_pet_information {
+  h2 {
+    width: 400px;
+    display: inline-block;
+  }
+  p {
+    display: inline-block;
+    font-size: 20px;
+    font-style: bold;
+    vertical-align: middle;
+    border-radius: 4px;
+    color: #65ab31;
+    text-align: center;
+    width: 100%;
+    background: #f0f6da;
+    border: 2px solid #65ab31;
+    height: 36px;
+    line-height: 36px;
+    width: 190px;
+    padding-bottom: 1px;
+    margin-left: 0;
+    margin-top: 5px;
   }
 }
 .add_pet_button {
   margin-top: 15px;
   margin-left: 60px;
+  span {
+    color: #65ab31;
+  }
 }
 .plus_pet {
   display: inline-block;
@@ -98,15 +136,42 @@
   padding: 16px;
   border-radius: 4px;
   position: relative;
+  margin-left: 30px;
 }
 .pet_image {
   display: inline-block;
+  img {
+    border-radius: 40px;
+  }
 }
-.pet_detail_information {
+.pet_information_detail {
   display: inline-block;
 }
+
 .pet_item_information{
   dd{
     display: inline-block;
+  }
+}
+.pet_profile_list {
+  padding:0 30px;
+  background-color: #fff;
+  tr {
+    border-bottom: 1px solid #eae9e7;
+    width: 100px;
+  }
+  .item_name {
+    width: 200px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #725947;
+    background: #f5f4f3;
+    padding: 20px 16px;
+    margin: 0 16px 0 0;
+  }
+  .user_status {
+    padding: 18px 0 18px 16px;
+    width: 800px;
+    font-size: 18px;
   }
 }
