@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :edit, :update] do
     resources :dogs, only: [:new, :create, :edit, :update, :destroy]
   end
-  resources :recipes, only: [:show, :create, :new, :edit, :update, :destroy] do
+  resources :recipes, only: [:show, :create, :new, :edit, :update, :destroy, :search] do
     resources :raw_materials, only: [:create]
     resources :procedures, only: [:create]
   end
