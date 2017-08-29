@@ -155,7 +155,7 @@
                 .user_recipe_img
                   %a
                     =image_tag recipe.image, size: "80x80", class: "profile_image"
-                  =link_to "/recipes/#{recipe.id}", class: "recipe_title" method: :get do
+                  =link_to "/recipes/#{recipe.id}", class: "recipe_title", method: :get do
                     =recipe.title
                   =link_to "/recipes/#{recipe.id}", class: "recipe_button",method: :delete do
                     削除
