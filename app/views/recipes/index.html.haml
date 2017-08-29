@@ -4,7 +4,7 @@
     #content
       .content_top
         .dog_img
-          %img{src: "https://s3-ap-northeast-1.amazonaws.com/image-upload-wango/uploads/wango_logo/image/wango_top_image.jpg", width: "800px", height: "500px"}
+          %img{src: "https://s3-ap-northeast-1.amazonaws.com/image-upload-wango/uploads/wango_logo/image/wango_top_image.jpg", width: "1170"}
       .content-inner.row
         .left-content.col-md-8
           #h2.headline-title.header-separator
@@ -28,8 +28,13 @@
         .right-content.col-md-4
           -if user_signed_in?
             .user_information
-              =link_to "/users/#{current_user.id}", method: :get do
-                マイページ
+              .user_image
+                =image_tag current_user.image, class: "index_user_image", size: "70x70"
+              .user_name_link
+                %h2
+                  =current_user.name + "さん"
+                =link_to "/users/#{current_user.id}", method: :get do
+                  マイページ
           .right-sidebar-header-separator
             %h2.headline-title
               特集
@@ -43,3 +48,4 @@
                     / 夏野菜との相性抜群！
                 .image-feature-description
                   / 夏野菜の一つのズッキーニ、大好きな人も多いのではないでしょうか。
+= render "layouts/footer"

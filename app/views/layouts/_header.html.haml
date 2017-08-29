@@ -17,10 +17,10 @@
       ワンご
     %span.wango_statement
       みんなでシェアしよう。手づくり”ワンちゃんごはん”レシピ
-    #search_box{"data-device" => "pc"}
-      %form{"accept-charset" => "UTF-8", :action => "/search", :method => "get"}
+    #search_box
+      %form.search_box{"accept-charset" => "UTF-8", action: "/search", method: "get"}
       %input{:name => "utf8", :type => "hidden", :value => "✓"}/
-      %input#query{:autocomplete => "off", :name => "query", :placeholder => "レシピ・キーワード検索", :type => "text"}/
+      %input.search_box{:autocomplete => "off", :name => "query", :placeholder => "レシピ・キーワード検索", :type => "text"}/
     #new_recipes
       %li.link
         =link_to new_recipe_path, method: :get do
