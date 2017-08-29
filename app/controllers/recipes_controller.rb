@@ -11,6 +11,14 @@ class RecipesController < ApplicationController
     @recipe.procedures.build
   end
 
+  def search
+    @recipes = Products.where('title LIKE(?)', "%#{params[:keyword]}%").limit(9)
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
+
   def create
     @recipe = Recipe.new(recipe_params)
     if @recipe.save
@@ -48,6 +56,8 @@ class RecipesController < ApplicationController
       redirect_to '/users/current_user.id'
     end
   end
+
+
   private
   def move_to_index
     redirect_to action: :index unless user_signed_in?
