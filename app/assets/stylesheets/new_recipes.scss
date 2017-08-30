@@ -1,11 +1,12 @@
-.new_recipe_wrapper {
-    width: 100%;
-    padding-top: 170px;
-    background-color: yellow;
+#wrapper.new_recipe_wrapper {
+  width: 100%;
+  padding-top: 50px;
+  background-color: #fafad2;
 }
+
 .recipe_errors {
   background-color: #fff9f5;
-  border: 1px solid #ff0000;
+  border: 3px solid #ff0000;
   width: 1170px;
   ul {
     margin: 0 auto;
@@ -15,67 +16,82 @@
     color: #ff0000;
   }
 }
+
 .recipe_content_inner {
   padding: 10px 10px 0 10px;
-  background-color: #F1F1F2;
+  background-color: #fafad2;
   z-index: 10;
   max-width: 1170px;
   margin: 0 auto;
 }
+
 .raw_material_title {
   cursor: pointer;
 }
+
 .new_recipe {
-  background: #ffffff;
+  background-color: #fafad2;
   margin: 0px auto 28px auto;
   border-radius: 2px;
   text-align: left;
-  height: 700px;
+  min-height: 700px;
   margin-top: 50px;
   padding: 40px;
 }
+
 .links_for_list_author {
   width: 100%;
-  margin-bottom: 10px;
+  margin: 30px;
   // height: 120px;
 }
+
 .set_delete_link a{
   float: right;
   font-size: 16px;
   color: #999999;
 }
-.box_title {
-  font-size: 30px;
+
+.box_title.fa.fa-book {
+  font-size: 20px;
   margin-bottom: 8px;
   font-weight: bold;
   color: #008000;
 }
+
+
 input {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
 .set_recipe_title__input {
   display: block;
-  width: 350px;
+  width: 480px;
   height: 40px;
-  border:1px solid #777;
+  border:3px solid #008000;
   border-radius: 5px;
   box-shadow: inset 1px 1px 4px #e6e6e6;
+  float: left;
+  margin: 20px 0px;
   }
 .set_recipe_image {
-  margin-top: 10px;
-  a {
+  margin-top: 30px;
+  margin-left: -40px;
+  position: absolute;
+  .fa {
     margin-left: 5px;
     color: #008000;
+    font-size: 20px;
     text-decoration: none;
+
   }
 }
 .img-thumbnail {
   display: none;
 }
 .set_recipe_description {
-  margin-top: 15px;
-  a {
+  clear: both;
+  margin: 20px 0px;
+  .fa {
     font-size: 20px;
     color: #008000;
     font-weight: bold;
@@ -83,19 +99,21 @@ input {
 }
 .set_recipe_description__input{
   display: block;
-  width: 350px;
+  width: 480px;
   height: 80px;
-  border:1px solid #777;
+  border:3px solid #008000;
   border-radius: 5px;
   box-shadow: inset 1px 1px 4px #e6e6e6;
+  margin: 20px 0px;
 }
 .raw_material_input_form {
-  margin-bottom: 10px;
+  margin: 30px;
 }
-.raw_material_title {
-  font-size: 30px;
+.raw_material_title.fa.fa-cutlery {
+  font-size: 20px;
   color: #008000;
   font-weight: bold;
+  margin: 20px 0px;
 }
 .raw_material_content_inner {
   height: 20px;
@@ -105,9 +123,8 @@ input {
   z-index: 9999;
   border: 5px solid #e3dcca;
   border-radius: 5px;
-  padding: 20px;
+  padding: 20px 20px 20px 70px;
   width: 480px;
-  margin-left: 150px;
 }
 .raw_material_list {
   margin: 0 auto;
@@ -138,7 +155,7 @@ input {
     width: 150px;
     height: 30px;
     display: block;
-    border:1px solid #777;
+    border:1px solid #008000;
     border-radius: 5px;
     box-shadow: inset 1px 1px 4px #e6e6e6;
   }
@@ -146,7 +163,7 @@ input {
     width: 150px;
     height: 30px;
     display: block;
-    border:1px solid #777;
+    border:1px solid #008000;
     border-radius: 5px;
     box-shadow: inset 1px 1px 4px #e6e6e6;
   }
@@ -155,6 +172,10 @@ input {
   margin-left: 10px;
   line-height: 25px;
   cursor: pointer;
+  background-color: #6E0107;
+  color: white;
+  border: none;
+  border-radius: 7px;
 }
 .edit_name {
   display: block;
@@ -181,10 +202,25 @@ input {
 .procedure_input_form {
   margin-top: 30px;
   float: left;
+  margin: 30px;
+  .procedure_box{
+    clear: both;
+  }
 }
 .procedures_list {
   // display: inline-block;
+  border-top: dotted 1px #008000;
+  padding: 20px 0px;
+  margin: 20px 0px;
+  height: 220px;
+  .procedure_header{
+    a{
+      font-size: 15px;
+      color: #008000;
+    }
+  }
 }
+
 .procedure_add_button {
   cursor: pointer;
   a {
@@ -196,12 +232,24 @@ input {
 }
 .procedure_description input{
   display: block;
-  width: 150px;
+  width: 480px;
   height: 120px;
-  border:1px solid #777;
+  border:3px solid #008000;
   border-radius: 5px;
   box-shadow: inset 1px 1px 4px #e6e6e6;
+  float: left;
+  margin: 10px 0px;
 }
+.procedure_image{
+  .fa{
+    font-size: 50px;
+    color: #008000;
+    position:absolute;
+    margin-top: 70px;
+    margin-left: 410px;
+  }
+}
+
 .procedure-thumbnail {
   display: none;
 }
