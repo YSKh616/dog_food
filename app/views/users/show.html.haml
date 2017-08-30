@@ -9,7 +9,7 @@
               %tr
                 %td.selfimgprofile
                   %a
-                    =image_tag current_user.image, size: "80x80", class: "profile_image"
+                    =image_tag current_user.image, size: "100x100", class: "profile_image"
                 %td.profile_name
                   %h1
                     %span
@@ -77,7 +77,7 @@
             -@dogs.each do |dog|
               .pet_information_detail
                 .pet_image
-                  =image_tag dog.image, size: "80x80"
+                  =image_tag dog.image, size: "100x100"
                 =link_to "/users/#{current_user.id}/dogs/#{dog.id}/edit", method: :get do
                   編集
                 =link_to "/users/#{current_user.id}/dogs/#{dog.id}", confirm: "削除してよろしいですか？", method: :delete do
