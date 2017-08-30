@@ -15,20 +15,44 @@
   float: left;
   margin-left: 100px;
 }
-
 .recipe_image {
   margin: 0 auto;
   width: 540px;
   height: 320px;
 }
-
+.user_information {
+  height: 220px;
+}
+.user_dog__image {
+  padding: 10px;
+}
+.user_information__image {
+  border-radius: 47px;
+  margin-bottom: 10px;
+}
+.recipe_detail_user {
+  font-size: 25px;
+  p {
+    font-size: 18px;
+  }
+}
+.user_pet_information_list {
+  font-size: 25px;
+  p {
+    font-size: 18px;
+  }
+}
+.pet_information__image {
+  border-radius: 47px;
+  margin-bottom: 10px;
+}
 .recipe_detail_main_info {
   margin-left: 100px;
-  width: 800px;
+  margin-top: 60px;
+  width: 600px;
   box-sizing: border-box;
   float: left;
 }
-
 .title {
   padding-bottom: 2px;
   border-bottom: 1px solid #C7C7CC;
@@ -39,9 +63,10 @@
 }
 .description {
   margin-top: 10px;
+  font-size: 20px;
 }
 .text-h2 {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: bold;
 }
 .ingredient {
@@ -49,25 +74,26 @@
   padding: 5px 0;
   display: flex;
   align-items: center;
+  font-size: 18px;
 }
 .ingredient_serving {
   margin-left: auto;
 }
-
-.recipe_detail_user {
-  float: right;
+.recipe_detail_right {
+  float: left;
   width: 400px;
-  height: 600px;
-  margin: 0 60px;
-  border: 1px solid #C7C7C7;
+  margin: 0 0 0 240px;
+  // border: 1px solid #008000;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #fafad2;
+  box-shadow: 1px 1px 0 #b8a58a;
 }
-
 .recipe_steps {
   display: block;
   margin-top: 15px;
   margin: 60px;
 }
-
 .recipe_step-text {
   width: 1200px;
   height: 40px;

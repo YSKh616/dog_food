@@ -14,6 +14,7 @@
             .links_for_list_author
               =f.label :description, '  レシピタイトル・写真',class: 'box_title fa fa-book'
               .set_recipe_title
+
                 = f.text_field :title, class: "set_recipe_title__input"
                 =f.label :image, class: 'set_recipe_image' do
                   %img#img_prev.img-thumbnail.hide{height: "100px", width: "100px"}
@@ -34,9 +35,9 @@
                         分量
                     .edit_raw_material_list
                       %span
-                        =r.text_field :material, placeholder: "例）鶏肉", class: "edit_name"
+                        =r.text_field :material, placeholder: "例）鶏肉", class: "edit_name", required: true
                       %span
-                        =r.text_field :quantity, placeholder: "例) 100g", class: "edit_quantity"
+                        =r.text_field :quantity, placeholder: "例) 100g", class: "edit_quantity", required: true
                 .material_add_button
                   %a
                     材料を追加
@@ -52,7 +53,7 @@
                       %i.fa.fa-camera
                         =pr.file_field :image,style: 'display: none;'
                     .procedure_description
-                      =pr.text_field :description, placeholder: "手順の説明"
+                      =pr.text_field :description, placeholder: "手順の説明", required: true
               .procedure_add_button
                 %a
                   手順を追加
