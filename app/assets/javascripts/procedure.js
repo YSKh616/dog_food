@@ -12,7 +12,7 @@ $(function() {
       + '<input type="file" name="recipe[procedures_attributes]['+ procedure_num +'][image]" id="recipe_procedures_attributes_'+ procedure_num + '_image">'
       + '</div>'
       + '<div class="procedure_description">'
-      + '<input placeholder="手順の説明" type="text" name="recipe[procedures_attributes]['+ procedure_num +'][description]" id="recipe_procedures_attributes_'+ procedure_num + '_image">'
+      + '<input placeholder="手順の説明" type="text" name="recipe[procedures_attributes]['+ procedure_num +'][description]" id="recipe_procedures_attributes_'+ procedure_num + '_image" required>'
       + '</div>'
       + '<button class="delete_button" id="delete_button_id">'
       + '削除'

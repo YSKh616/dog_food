@@ -15,7 +15,7 @@
               .box_title
                 レシピタイトル
               .set_recipe_title
-                = f.text_field :title, class: "set_recipe_title__input"
+                = f.text_field :title, class: "set_recipe_title__input", required: true
               .set_recipe_image
                 %a 画像
                 %img#img_prev.img-thumbnail.hide{height: "100px", width: "100px"}
@@ -23,7 +23,7 @@
                 = f.file_field :image, placeholder: "人や人物が映り込んだ写真、オリジナルでないものはご遠慮下さい"
               .set_recipe_description
                 %a レシピ内容
-                = f.text_area :description, placeholder: "キャッチコピー、簡単な説明を入力して下さい", class: "set_recipe_description__input", rows: "7"
+                = f.text_area :description, placeholder: "キャッチコピー、簡単な説明を入力して下さい", class: "set_recipe_description__input", rows: "7", required: true
             .raw_material_input_form
               %p.raw_material_title
                 材料
@@ -37,9 +37,9 @@
                         分量
                     .edit_raw_material_list
                       %span
-                        =r.text_field :material, placeholder: "例）鶏肉", class: "edit_name"
+                        =r.text_field :material, placeholder: "例）鶏肉", class: "edit_name", required: true
                       %span
-                        =r.text_field :quantity, placeholder: "例) 100g", class: "edit_quantity"
+                        =r.text_field :quantity, placeholder: "例) 100g", class: "edit_quantity", required: true
                 .material_add_button
                   %a
                     材料を追加
@@ -54,7 +54,7 @@
                       %img#procedure_0_prev.procedure-thumbnail.hide{height: "100px", width: "100px"}
                       =pr.file_field :image
                     .procedure_description
-                      =pr.text_field :description, placeholder: "手順の説明"
+                      =pr.text_field :description, placeholder: "手順の説明", required: true
               .procedure_add_button
                 %a
                   手順を追加
