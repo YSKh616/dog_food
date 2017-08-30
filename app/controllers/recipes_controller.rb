@@ -24,8 +24,7 @@ class RecipesController < ApplicationController
     if @recipe.save
       redirect_to root_path
     else
-      flash.now[:alert] = '未入力の項目があります'
-      render :new
+      redirect_to :new
     end
   end
 
@@ -47,6 +46,7 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
+    @user = User.find(@recipe.user_id)
   end
 
   def destroy
@@ -56,6 +56,7 @@ class RecipesController < ApplicationController
       redirect_to '/users/current_user.id'
     end
   end
+
 
 
   private
