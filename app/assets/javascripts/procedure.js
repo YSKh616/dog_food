@@ -9,7 +9,7 @@ $(function() {
       + '<a>' + '手順.' + procedure_list_num + '</a>'
       + '</div>'
       + '<div class="procedure_image">'
-      + '<input type="file" name="recipe[procedures_attributes]['+ procedure_num +'][image]" id="recipe_procedures_attributes_'+ procedure_num + '_image">'
+      + '<input type="file" name="recipe[procedures_attributes]['+ procedure_num +'][image]" id="recipe_procedures_attributes_'+ procedure_num + '_image" required>'
       + '</div>'
       + '<div class="procedure_description">'
       + '<input placeholder="手順の説明" type="text" name="recipe[procedures_attributes]['+ procedure_num +'][description]" id="recipe_procedures_attributes_'+ procedure_num + '_image" required>'

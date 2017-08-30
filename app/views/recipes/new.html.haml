@@ -20,7 +20,7 @@
                 %a 画像
                 %img#img_prev.img-thumbnail.hide{height: "100px", width: "100px"}
                 =f.label :recipe_image
-                = f.file_field :image, placeholder: "人や人物が映り込んだ写真、オリジナルでないものはご遠慮下さい"
+                = f.file_field :image, placeholder: "人や人物が映り込んだ写真、オリジナルでないものはご遠慮下さい", required: true
               .set_recipe_description
                 %a レシピ内容
                 = f.text_area :description, placeholder: "キャッチコピー、簡単な説明を入力して下さい", class: "set_recipe_description__input", rows: "7", required: true
