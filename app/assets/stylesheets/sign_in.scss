@@ -6,31 +6,57 @@
 // }
 .sign_in {
   text-align: center;
-  margin: 68px 0 26px 0;
+  background: #fafad2;
+  height: 100vh;
 }
 
+// .user-title {
+//   color: #6a6a6a;
+//   text-align: center;
+//   padding: 0.25em 0;
+//   border-top: solid 2px #6cb4e4;
+//   border-bottom: solid 2px #6cb4e4;
+//   background-color: #008000;
+//   background: -webkit-repeating-linear-gradient(#008000, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+//   background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+//   width: 100vw;
+// }
 
 .company_logo {
-  margin-bottom: 20px;
+  padding: 20px 0;
   img {
     height: 130px;
-    width: 90px;
+    width: 100px;
   }
   h2 {
     color: #6a6a6a;
-    font-size: 18px;
+    font-size: 24px;
     line-height: 36px;
-    margin-bottom: 6px;
+    // margin-bottom: 6px;
+  }
+}
+
+.company_logo_new {
+  padding: 20px 0;
+  img {
+    height: 130px;
+    width: 100px;
+  }
+  h2 {
+    color: #6a6a6a;
+    font-size: 24px;
+    line-height: 36px;
+    // margin-bottom: 6px;
   }
 }
 
 .sign_in_form {
   position: relative;
-  padding:0 10px 0 10px;
+  // padding:0 10px 0 10px;
   text-align: center;
 }
 .sign_in_form_position {
-  max-width: 300px;
+  max-width: 400px;
   background: #ffffff;
   margin: 0px auto 28px auto;
   border: 1px solid #dedede;
@@ -43,47 +69,74 @@
   text-align: center;
 }
 
-.field {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-#user_email {
-  width: 230px;
-  height: 30px;
-  border-radius: 7px;
-  border: solid 1px #d0d0d0;
-  cursor: pointer;
-  position: relative;
-  z-index: 2;
-  background-color: #ffffff;
-  text-align: center;
-}
-#user_password {
-  width: 230px;
-  height: 30px;
-  border-radius: 7px;
-  border: solid 1px #d0d0d0;
-  cursor: pointer;
-  position: relative;
-  z-index: 2;
-  background-color: #ffffff;
-  text-align: center;
-}
-
-label {
-  font-size: 10px;
+.field-login {
+  height: 66px;
+  width: 306px;
+  font-size: 20px;
   color: #6a6a6a;
-  margin-bottom: 5px;
+  margin: 0 auto 20px auto;
 }
+
+.field {
+  height: 66px;
+  width: 306px;
+  text-align: center;
+  margin: 0 auto 20px auto;
+  th {
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #00a000;
+    border-bottom: 1px solid #faf9f4;
+    font-size: 18px;
+    color: white;
+  }
+  td {
+    background-color: white;
+    padding-left: 20px;
+    box-sizing: border-box;
+    padding-right: 20px;
+    // border-top: 1px solid #faf9f4;
+    // border-right: 1px solid #faf9f4;
+    // border-bottom: 1px solid #faf9f4;
+  }
+}
+
+#user_email, #user_name, #user_password, #user_password_confirmation, #user_area {
+  width: 300px;
+  height: 30px;
+  border-radius: 7px;
+  border: solid 1px #d0d0d0;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+// label {
+//   font-size: 10px;
+//   color: #6a6a6a;
+//   margin-bottom: 5px;
+// }
 .actions {
   text-align: center;
+  margin: 15px auto;
 }
 .actions input {
-  background-color: #2dbe60;
+  background-color: #00a000;
   border-radius: 7px;
   width: 230px;
-  height: 30px;
+  height: 45px;
   color: white;
   border: none;
+  font-size: 18px;
 }
+
+.user-info {
+  margin: 0 auto;
+}
+
+.support_form {
+  font-weight: bold;
+}
+
