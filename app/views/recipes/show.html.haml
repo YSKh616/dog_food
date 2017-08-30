@@ -8,24 +8,55 @@
             =image_tag @recipe.image, size: "540x320"
       .recipe_detail_right
         .recipe_detail_user
-          user's information
-        .recipe_detail_main_info
-          .recipe_title
-            %h1.title
+          投稿者
+          .user_information
+            =image_tag @user.image, size: "100x100", class: "user_information__image"
+            .user_information__profile
+              %p
+                ="名前： " + @user.name
+              %p
+                ="年齢： " + @user.age.to_s
+              %p
+                ="地域： " + @user.area
+        .user_pet_information_list
+          投稿者のわんちゃん
+          -if @user.dogs
+            -@user.dogs.each do |dog|
+              .user_dog__image
+                =image_tag dog.image, size: "100x100", class: "pet_information__image"
+                .user_dog__profile_list
+                  %p
+                    ="名前： " + dog.name
+                  %p
+                    ="年齢： " + dog.age.to_s
+                  %p
+                    ="犬種： " + dog.type
+                  %p
+                    ="性別： " + dog.sex
+                  %p
+                    ="アレルギー: " + dog.allergy
+                  %p
+                    ="既往歴: " + dog.medicalhistory
+          -else
+            わんちゃんは登録されていません。
+
+      .recipe_detail_main_info
+        .recipe_title
+          %h1.title
+            %span
+              =@recipe.title
+        %p.description
+          =@recipe.description
+        %h2.ingredient_header
+          %span.text-h2
+            材料
+        %ul.ingredient_list
+          -@recipe.raw_materials.each do |raw_material|
+            %li.ingredient
               %span
-                =@recipe.title
-          %p.description
-            =@recipe.description
-          %h2.ingredient_header
-            %span.text-h2
-              材料
-          %ul.ingredient_list
-            -@recipe.raw_materials.each do |raw_material|
-              %li.ingredient
-                %span
-                  =raw_material.material
-                %span.ingredient_serving
-                  =raw_material.quantity
+                =raw_material.material
+              %span.ingredient_serving
+                =raw_material.quantity
     .recipe_steps
       .recipe_step-text
         %h2
