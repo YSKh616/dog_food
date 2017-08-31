@@ -12,11 +12,10 @@ $(function() {
       + '<button class="delete_button" id="delete_button_id">'
       + '削除'
       + '</button>'
-      + '</div>'
+      + '</div>';
       $('.raw_material_list').append(input);
-      material_num ++;
   });
-  $(document).on('click','#delete_button_id', function(){
-    $('#delete_button_id').parent().remove();
+  $(document).on('click','.delete_button', function(){
+    $(this).parent().remove();
   })
 });
